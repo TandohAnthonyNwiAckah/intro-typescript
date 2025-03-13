@@ -8,16 +8,18 @@ interface hasFormatter {
   format(): string;
 }
 
-class MenuItem implements hasFormatter {
+abstract class MenuItem implements hasFormatter {
   constructor(private title: string, private price: number) {}
 
   get details(): string {
     return `${this.title} - $${this.price}`;
   }
 
-  format() {
-    return `This menu item is called ${this.title} and is £${this.price}`;
-  }
+  // format() {
+  //   return `This menu item is called ${this.title} and is £${this.price}`;
+  // }
+
+  abstract format(): string;
 }
 
 class Pizza extends MenuItem {
@@ -39,7 +41,26 @@ class Pizza extends MenuItem {
   selectBase(b: Base): void {
     this.base = b;
   }
+
+  format(): string {
+    let formatted = this.details + "\n";
+
+    // base
+    formatted += `Pizza on a ${this.base} base `;
+
+    // toppings
+    if (this.toppings.length < 1) {
+      formatted += "with no toppings.";
+    }
+    if (this.toppings.length > 0) {
+      formatted += `with: ${this.toppings.join(", ")}`;
+    }
+
+    return formatted;
+  }
 }
+
+////////
 
 const pizza = new Pizza("tana special", 15);
 
@@ -48,6 +69,8 @@ pizza.addTopping("mushrooms");
 pizza.addTopping("olives");
 
 console.log(pizza);
+
+/////
 
 // explicit
 const pizzaOne: Pizza = new Pizza("doe special", 15);
