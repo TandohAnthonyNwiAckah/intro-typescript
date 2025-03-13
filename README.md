@@ -35,3 +35,13 @@ tsc filename.ts
 ```typescript
 node filename.js
 ```
+
+
+## tsc --init Command in TypeScript
+The command ```tsc --init``` is used to create a tsconfig.json file, which is the configuration file for TypeScript. This file defines compiler options, project settings, and file inclusions/exclusions.
+
+
+## Watching for Changes in .ts files
+```typescript
+tsc --watch
+```
