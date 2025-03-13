@@ -24,3 +24,14 @@ pizza.selectBase("garlic");
 pizza.addTopping("mushrooms");
 pizza.addTopping("olives");
 console.log(pizza);
+// explicit
+const pizzaOne = new Pizza("doe special", 15);
+// inferred
+const pizzaTwo = new Pizza("john special", 10);
+function addMushroomsToPizza(pizzas) {
+    for (const p of pizzas) {
+        p.addTopping("mushrooms");
+    }
+}
+addMushroomsToPizza([pizzaOne, pizzaTwo]);
+console.log(pizzaOne, pizzaTwo);

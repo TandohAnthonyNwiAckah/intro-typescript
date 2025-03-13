@@ -30,3 +30,19 @@ pizza.addTopping("mushrooms");
 pizza.addTopping("olives");
 
 console.log(pizza);
+
+// explicit
+const pizzaOne: Pizza = new Pizza("doe special", 15);
+
+// inferred
+const pizzaTwo = new Pizza("john special", 10);
+
+function addMushroomsToPizza(pizzas: Pizza[]): void {
+  for (const p of pizzas) {
+    p.addTopping("mushrooms");
+  }
+}
+
+addMushroomsToPizza([pizzaOne, pizzaTwo]);
+
+console.log(pizzaOne, pizzaTwo);
