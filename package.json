@@ -1,0 +1,23 @@
+{
+  "name": "intro-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript is a superset of JavaScript developed by Microsoft that adds static typing and additional features to make JavaScript development more scalable and maintainable. TypeScript compiles to plain JavaScript, so it runs anywhere JavaScript does (browsers, Node.js, etc.).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TandohAnthonyNwiAckah/intro-typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TandohAnthonyNwiAckah/intro-typescript/issues"
+  },
+  "homepage": "https://github.com/TandohAnthonyNwiAckah/intro-typescript#readme",
+ 
+  "devDependencies": {
+    "@types/node": "^22.13.10"
+  }
+}

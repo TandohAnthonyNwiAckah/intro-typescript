@@ -2,16 +2,16 @@
 //-----------
 // functions
 //-----------
-function addTwoNumbers(a, b) {
+function addTwoNumber(a, b) {
     return a + b;
 }
-const subtractTwoNumbers = (a, b) => {
+const subtractTwoNumber = (a, b) => {
     return a - b;
 };
 // addTwoNumbers('2', 5)
-const answer = addTwoNumbers(3, 9);
+const answer = addTwoNumber(3, 9);
 console.log(answer);
-const ans = subtractTwoNumbers(10, 7);
+const ans = subtractTwoNumber(10, 7);
 console.log(ans);
 function addAllNumbers(items) {
     const total = items.reduce((a, c) => a + c, 0);
@@ -26,5 +26,5 @@ function formatGreeting(name, greeting) {
 }
 // we get inference on return types, but not on argument types
 // type inference on return values does not enforce a return type
-const greeting = formatGreeting('John', 'Hello');
+const greeting = formatGreeting("John", "Hello");
 console.log(greeting);

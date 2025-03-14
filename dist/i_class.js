@@ -63,7 +63,7 @@ function printMenuItem(item) {
 }
 printMenuItem(pizza);
 /// Get the has formatter interface
-function printFormatted(val) {
+function printFormat(val) {
     console.log(val.format());
 }
-printFormatted(pizza);
+printFormat(pizza);

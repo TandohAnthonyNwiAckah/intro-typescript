@@ -45,3 +45,9 @@ The command ```tsc --init``` is used to create a tsconfig.json file, which is th
 ```typescript
 tsc --watch
 ```
+
+
+## Generate package.json
+```javascript
+npm init -Y
+```

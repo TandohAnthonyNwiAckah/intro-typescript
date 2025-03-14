@@ -95,8 +95,8 @@ function printMenuItem(item: MenuItem): void {
 printMenuItem(pizza);
 
 /// Get the has formatter interface
-function printFormatted(val: hasFormatter): void {
+function printFormat(val: hasFormatter): void {
   console.log(val.format());
 }
 
-printFormatted(pizza);
+printFormat(pizza);
