@@ -7,9 +7,27 @@ export class DataResource<T> {
     return res.json();
   }
 
-  async loadOne(id: number) {}
+  async loadOne(id: number): Promise<T> {
+    const res = await fetch(`${this.endpoint}/${id}`);
 
-  async delete(id: number) {}
+    return res.json();
+  }
 
-  async save(data: T) {}
+  async delete(id: number): Promise<Response> {
+    const res = await fetch(`${this.endpoint}/${id}`, {
+      method: "DELETE",
+    });
+
+    return res.json();
+  }
+
+  async save(data: T): Promise<Response> {
+    const res = await fetch(this.endpoint, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    return res.json();
+  }
 }

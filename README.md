@@ -51,3 +51,16 @@ tsc --watch
 ```javascript
 npm init -Y
 ```
+
+
+
+## Run with parcel
+```javascript
+npx parcel src/*.html  
+```
+
+
+## Run with json-server
+```javascript
+json-server --watch db.json 
+```
