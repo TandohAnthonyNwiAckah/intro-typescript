@@ -18,7 +18,7 @@ export class DataResource<T> {
       method: "DELETE",
     });
 
-    return res.json();
+    return res;
   }
 
   async save(data: T): Promise<Response> {
@@ -28,6 +28,6 @@ export class DataResource<T> {
       headers: { "Content-Type": "application/json" },
     });
 
-    return res.json();
+    return res;
   }
 }
